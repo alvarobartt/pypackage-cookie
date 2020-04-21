@@ -1,0 +1,16 @@
+{
+    "author": "Alvaro Bartolome del Canto",
+    "email": "alvarobartt@example.com",
+    "github_username": "alvarobartt",
+    "project_name": "Python Package",
+    "project_description": "This project is a sample Python Package",
+    "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+    "package_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+    "pypi_username": "{{ cookiecutter.github_username }}",
+    "version": "1",
+    "license": [
+        "MIT License", "BSD License", "ISC License",
+        "Apache Software License 2.0", "GNU General Public License v3",
+        "WTFPL License", "None"
+    ]
+}
