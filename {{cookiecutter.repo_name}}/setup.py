@@ -19,14 +19,14 @@ def requirements():
 
 setup(
     name='{{ cookiecutter.package_name }}',
-    version='{{ cookiecutter.package_version }}',
+    version='{{ cookiecutter.version }}',
     packages=find_packages(),
     url="https://www.github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}",
-    download_url='https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}/archive/{{ cookiecutter.package_version }}.tar.gz',
+    download_url='https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}/archive/{{ cookiecutter.version }}.tar.gz',
     license='{{ cookiecutter.license }}',
     author='{{ cookiecutter.author }}',
-    author_email='{{ cookiecutter.author_email }}',
-    description='{{ cookiecutter.package_name }} — {{ cookiecutter.short_description }}',
+    author_email='{{ cookiecutter.email }}',
+    description='{{ cookiecutter.package_name }} — {{ cookiecutter.project_description }}',
     long_description=readme(),
     long_description_content_type='text/markdown',
     install_requires=requirements(),
