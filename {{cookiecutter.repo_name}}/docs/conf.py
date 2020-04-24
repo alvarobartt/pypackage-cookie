@@ -25,9 +25,9 @@ copyright = '{% now 'local', '%Y' %}, {{ cookiecutter.author }}'
 author = '{{ cookiecutter.author }}'
 
 # The short X.Y version
-version = '1.0'
+version = '{{ cookiecutter.version }}'
 # The full version, including alpha/beta/rc tags
-release = '1.0'
+release = '{{ cookiecutter.version }}'
 
 
 # -- General configuration ---------------------------------------------------
