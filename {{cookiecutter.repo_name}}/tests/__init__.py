@@ -1,2 +1,2 @@
-# Copyright {{ cookiecutter.year }} {{ cookiecutter.author }}
+# Copyright {% now 'local', '%Y' %} {{ cookiecutter.author }}
 # See LICENSE for details.

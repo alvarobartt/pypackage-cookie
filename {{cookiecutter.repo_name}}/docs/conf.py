@@ -21,7 +21,7 @@ import sphinx_rtd_theme
 # -- Project information -----------------------------------------------------
 
 project = '{{ cookiecutter.package_name }}'
-copyright = '{{ cookiecutter.year }}, {{ cookiecutter.author }}'
+copyright = '{% now 'local', '%Y' %}, {{ cookiecutter.author }}'
 author = '{{ cookiecutter.author }}'
 
 # The short X.Y version

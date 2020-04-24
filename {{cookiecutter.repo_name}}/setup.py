@@ -1,4 +1,4 @@
-# Copyright {{ cookiecutter.year }} {{ cookiecutter.author }}
+# Copyright {% now 'local', '%Y' %} {{ cookiecutter.author }}
 # See LICENSE for details.
 
 from setuptools import setup, find_packages
