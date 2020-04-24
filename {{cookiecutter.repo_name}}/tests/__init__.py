@@ -1,2 +1,2 @@
-# Copyright 2020 {{ cookiecutter.author }}
+# Copyright {{ cookiecutter.year }} {{ cookiecutter.author }}
 # See LICENSE for details.

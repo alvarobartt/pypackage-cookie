@@ -1,4 +1,4 @@
-# Copyright 2020 {{ cookiecutter.author }}
+# Copyright {{ cookiecutter.year }} {{ cookiecutter.author }}
 # See LICENSE for details.
 
 from setuptools import setup, find_packages
