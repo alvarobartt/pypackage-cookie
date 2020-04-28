@@ -8,25 +8,27 @@
 
 This cookie provides the following features:
 
-* A [Flask-RESTX](https://github.com/python-restx/flask-restx) API properly defined skeleton
-* An [argparse](https://docs.python.org/3/library/argparse.html) client which defines the entry point of the API
-* [Pytest](https://docs.pytest.org/en/latest/) unit tests
-* [Swagger.io](https://swagger.io/) automatic API reference documentation
+* A complete Python package skeleton including all the main standards used while creating and uploading a proper Python package.
+* [Pytest](https://docs.pytest.org/en/latest/) for testing Python package functions.
+* [Travis-CI](https://travis-ci.org/) continuous integration so as to test that the package works properly after each commit.
+* Integration with [Codecov](https://azure.microsoft.com/es-es/services/devops/pipelines/) so as to get to know which source code lines are hitted and which of them are missed.
+* Additionally, other CI tools such as [Azure Pipelines](https://azure.microsoft.com/es-es/services/devops/pipelines/) or [Github Actions](https://github.com/features/actions).
+* [sphinx](https://www.sphinx-doc.org/en/master/) automatic developer documentation generated from function docstrings, rStructuredText & Markdown files, which can lated be hosted on [ReadTheDocs](https://readthedocs.org/).
 * and much more that will be progressively included...
 
 ## Installation
 
-Firstly, you will need to install [cookiecutter](https://github.com/cookiecutter/cookiecutter) using pip from a Python3.6 version or higher since **this cookie recipe just works on Python3.6+**; use the following command:
+Firstly, you will need to install [cookiecutter](https://github.com/cookiecutter/cookiecutter) using pip from a Python3.5 version or higher since **this cookie recipe just works on Python3.5+**; use the following command:
 
 ``pip install cookiecutter``
 
 So as **to create your own cookie from this recipe you will need to clone this repository** using the following command:
 
-``git clone https://github.com/alvarobartt/restx-cookie``
+``git clone https://github.com/alvarobartt/pypackage-cookie``
 
 Once it is properly cloned, from the working directory, you will need to **pass the cloned cookie as an argument to the cookiecutter entry point** as it follows:
 
-``cookiecutter /path/to/restx-cookie``
+``cookiecutter /path/to/pypackage-cookie``
 
 This command will launch the **cookiecutter prompt into your terminal**, which will ask you some configuration options as specified in the cookie recipe for you to select the most suitable ones according to your needs.
 
@@ -35,33 +37,43 @@ So to bake this cookie, the cookiecutter prompt will ask you to select the follo
 ```
 author [Alvaro Bartolome del Canto]: Cookie Monster
 email [alvarobartt@example.com]: cookiemonster@sesamestreet.com
-github_username [alvarobartt]: cookie-monster       
-project_name [Flask Restx API]: awesome-cookie
-project_description [This project is a sample Python Flask Restx API]: This is an awesome cookie!   
-repo_name [awesome_cookie]: awesome_cookie
-package_name [awesome_cookie]: awesome_cookie
-pypi_username [cookie-monster]: cookie-monster
-version [1]: 1
-flask_limiter [yes]: yes
-flask_cache [yes]: yes
-flask_cors [yes]: yes
+github_username [alvarobartt]: cookie-monster
+project_name [Python Package]: awesome-cookie
+project_description [This project is a sample Python Package]: This is an awesome cookie!
+repo_name [awesome_cookie]: 
+package_name [awesome_cookie]: 
+pypi_username [cookie-monster]: 
+version [1]: 
+Select license:
+1 - MIT License
+2 - BSD License
+3 - ISC License
+4 - Apache Software License 2.0
+5 - GNU General Public License v3
+6 - WTFPL License
+7 - None
+Choose from 1, 2, 3, 4, 5, 6, 7 [1]: 1
 ```
 
 When this process is finished, automatically a directory named as specified in `repo_name` will be created containing the following files and directories:
 
-``awesome_cookie/  MANIFEST.in  README.md  requirements.txt  setup.cfg  setup.py  tests/``
+``awesome_cookie/  docs/  LICENSE  MANIFEST.in  README.md  requirements.txt  setup.cfg  setup.py  tests/``
 
-**Congratulations! You already baked your own restx-cookie!**
+**Congratulations! You already baked your own pypackage-cookie!**
 
 ## Usage
 
-**Once the cookie is completely baked, you can take it off the oven!** So on, from the `repo_name` previously created directory, so as to **install the Flask RESTX API** (since it is a Python package) you will need to run on of the following commands: `pip install .` or `python setup.py install`, which will install not just the package but all its dependencies.
+**Once the cookie is completely baked, you can take it off the oven!** So on, from the `repo_name` previously created directory, you can install it using pip by typing: ``pip install .`` and modify it as you need to in order to fit your needs.
 
-Once the newly created cookie is installed, just paste its **entry point** on the command line as it follows:
+Since it is a Python package, if it is an open source one, in order to upload it to PyPI so that every user can download and install it, you will need to:
 
-`awesome_cookie`
-
-**The entry-point will launch the Flask RESTX API in your public IP (0.0.0.0) in the port 5000 using the current version** (which by deafult is the v1 version), so the complete address of the API is: `http://0.0.0.0:5000/v1`. In that address you will find the Swagger.io documentation automatically generated so as to know which endpoints are available, which data models are integrated, which is the input/output structure, etc.
+- Go to your Github repo URL and access the tab called `Releases`.
+- Then, click the button `Draft a new release` so as to create a new project release version. (Note that the version number of the release should be the same as specified on the `version` attribute, which will need to be updated before drafting every new release at https://github.com/alvarobartt/pypackage-cookie/blob/master/%7B%7Bcookiecutter.repo_name%7D%7D/setup.py).
+- Once the release is created, you need to be placed on the project's directory root, where the `setup.py` file is.
+- Before uploading it, you will need to create a new ZIP file from source code, which will be done using: ``python setup.py sdist``. The previous command will create the new ZIP file under the `dist/` directory.
+- In order to upload it to PyPI, you will need to install `twine` which is an utility for publishing Python packages using the command: ``pip install twine``
+- Once installed, you need to cd into the recently generated `dist/` directory.
+- Finally, you will just need to upload it to PyPI using the following command: ``twine upload /path/to/package-version.zip`` and access with your PyPI credentials.  
 
 **Now you are completely free to eat your cookie!**
 
@@ -81,10 +93,11 @@ You can find a curated collection of self made cookies at [cookie-jar](https://g
 
 If you don't like neither the cookie neither the chef (or chefs), to each his own... here we do not judge you (just a little), here you have a list of some **similar cookie recipes you may like**:
 
-- [cookiecutter-flask](https://github.com/cookiecutter-flask/cookiecutter-flask)
-- [cookiecutter-flask-skeleton](https://github.com/realpython/cookiecutter-flask-skeleton)
-- [flask-empty](https://github.com/italomaia/flask-empty)
-- [cookiecutter-flask-restful](https://github.com/karec/cookiecutter-flask-restful)
+- [audreyr/cookiecutter-pypackage](https://github.com/audreyr/cookiecutter-pypackage)
+- [kragniz/cookiecutter-pypackage-minimal](https://github.com/kragniz/cookiecutter-pypackage-minimal)
+- [ardydedase/cookiecutter-pypackage](https://github.com/ardydedase/cookiecutter-pypackage)
+- [elgertam/cookiecutter-pipenv](https://github.com/elgertam/cookiecutter-pipenv)
+- [conda/cookiecutter-conda-python](https://github.com/conda/cookiecutter-conda-python)
 
 ## You want to become a chef too?
 

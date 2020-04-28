@@ -7,7 +7,17 @@ import {{ cookiecutter.package_name }}
 
 
 def sample_tests():
-    return None
+    params = [
+        {
+            'value': True
+        },
+        {
+            'value': False
+        }
+    ]
+
+    for param in params:
+        assert {{ cookiecutter.package_name }}.sample_function(value=param['value'])
 
 
 if __name__ == "__main__":
