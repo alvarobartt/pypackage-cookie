@@ -32,7 +32,7 @@ Once it is properly cloned, from the working directory, you will need to **pass 
 
 This command will launch the **cookiecutter prompt into your terminal**, which will ask you some configuration options as specified in the cookie recipe for you to select the most suitable ones according to your needs.
 
-So to bake this cookie, the cookiecutter prompt will ask you to select the following ingredients (configuration) in case you want to name your cookie (project), for example, lets suppose that your project will be named `awesome_cookie` its configuration will be:
+**So as to bake this cookie, the cookiecutter prompt will ask you to select between the following ingredients** (configuration) in case you want to name your cookie (project), for example, lets suppose that your project will be named `awesome_cookie` its configuration will be:
 
 ```
 author [Alvaro Bartolome del Canto]: Cookie Monster
@@ -65,17 +65,32 @@ When this process is finished, automatically a directory named as specified in `
 
 **Once the cookie is completely baked, you can take it off the oven!** So on, from the `repo_name` previously created directory, you can install it using pip by typing: ``pip install .`` and modify it as you need to in order to fit your needs.
 
-Since it is a Python package, if it is an open source one, in order to upload it to PyPI so that every user can download and install it, you will need to:
-
-- Go to your Github repo URL and access the tab called `Releases`.
-- Then, click the button `Draft a new release` so as to create a new project release version. (Note that the version number of the release should be the same as specified on the `version` attribute, which will need to be updated before drafting every new release at https://github.com/alvarobartt/pypackage-cookie/blob/master/%7B%7Bcookiecutter.repo_name%7D%7D/setup.py).
-- Once the release is created, you need to be placed on the project's directory root, where the `setup.py` file is.
-- Before uploading it, you will need to create a new ZIP file from source code, which will be done using: ``python setup.py sdist``. The previous command will create the new ZIP file under the `dist/` directory.
-- In order to upload it to PyPI, you will need to install `twine` which is an utility for publishing Python packages using the command: ``pip install twine``
-- Once installed, you need to cd into the recently generated `dist/` directory.
-- Finally, you will just need to upload it to PyPI using the following command: ``twine upload /path/to/package-version.zip`` and access with your PyPI credentials.  
-
 **Now you are completely free to eat your cookie!**
+
+### Share your cookie
+
+**If you baked a nice cookie from the provided recipe, it will be a shame if you did not share it with other people...** Since it is a Python package, in order to upload it to PyPI so that every user can download and install it, you will need to:
+
+* Go to your Github repo URL and access the tab called `Releases`.
+* Then, click the button `Draft a new release` so as to **create a new project release version**. (Note that the version number of the release should be the same as specified on the `version` attribute, which will need to be updated before drafting every new release at https://github.com/alvarobartt/pypackage-cookie/blob/master/%7B%7Bcookiecutter.repo_name%7D%7D/setup.py).
+* Once the release is created, you need to be placed on the project's directory root, where the `setup.py` file is.
+* Before uploading it, you will need to create a new ZIP file from source code, which will be done using: ``python setup.py sdist``. The previous command will create the new ZIP file under the `dist/` directory.
+* In order to **upload it to PyPI**, you will need to install `twine` which is an utility for publishing Python packages using the command: ``pip install twine``
+* Once installed, you need to cd into the recently generated `dist/` directory.
+* Finally, you will just need to upload it to PyPI using the following command: ``twine upload /path/to/package-version.zip`` and access with your PyPI credentials.
+
+**Thanks for sharing your cookie!**
+
+### Test the oven
+
+**A really important step when baking cookies is to test that the oven works properly so as to bake better cookies!** So on, referring to the CI tools, you will need to set them up so as to work as expected when commiting to the repository so as to ensure that your package is working as expected.
+
+* __Travis-CI__: sign in with Github, then grant Travis access to your public repositories, select the current repository and run the created build so as to test that everything works as expeceted.
+* __Azure Pipelines__: sign in with Github and grant access to your public repositories, just like when setting up Travis-CI, create a new organization and then a new project inside (you can name them both as you prefer) and then create a new pipeline from Github YAML where you just need to select the `azure-pipelines.yml` file which was created while baking the cookie.
+* __Github Actions__: from your Github project website, just go to the tab `Actions` and setup the workflow that is created under `.github`, where you just need to select it and run it.
+
+**Always make sure that the oven is clean and fully operative...**
+
 
 ## Cookie recipe created by...
 
@@ -87,7 +102,7 @@ Since it is a Python package, if it is an open source one, in order to upload it
 
 ## Want more cookies?
 
-You can find a curated collection of self made cookies at [cookie-jar](https://github.com/alvarobartt/cookie-jar)
+You can find a **curated collection of self made cookies** at [cookie-jar](https://github.com/alvarobartt/cookie-jar)
 
 ## You don't like this cookie? You don't like the chef/chefs?
 
