@@ -13,7 +13,7 @@ This cookie provides the following features:
 * [Travis-CI](https://travis-ci.org/) continuous integration so as to test that the package works properly after each commit.
 * Integration with [Codecov](https://azure.microsoft.com/es-es/services/devops/pipelines/) so as to get to know which source code lines are hitted and which of them are missed.
 * Additionally, other CI tools such as [Azure Pipelines](https://azure.microsoft.com/es-es/services/devops/pipelines/) or [Github Actions](https://github.com/features/actions).
-* [sphinx](https://www.sphinx-doc.org/en/master/) automatic developer documentation generated from function docstrings, rStructuredText & Markdown files, which can lated be hosted on [ReadTheDocs](https://readthedocs.org/).
+* [sphinx](https://www.sphinx-doc.org/en/master/) automatic developer documentation generated from function docstrings, reStructuredText & Markdown files, which can lated be hosted on [ReadTheDocs](https://readthedocs.org/).
 * and much more that will be progressively included...
 
 ## Installation
@@ -91,6 +91,19 @@ When this process is finished, automatically a directory named as specified in `
 
 **Always make sure that the oven is clean and fully operative...**
 
+### Generate the cookie recipe
+
+**So as not to forget about how you made the cookie, you should generate its recipe.** As already mentioned, the HTML docs using ReadTheDocs template are included in the project, so that the user can easily generate the developer documenation.
+
+This means that once the package fits the needs of the user, the documentation needs to be generated so as to keep a proper tracking and structure of the project, since it will ease a lot not just the user's tasks but any other open source user while trying to understand your project in order to use it or contribute to it.
+
+To generate the latest version of the docs, after writting and formatting all the required docstrings properly, you will just need to cd into the `docs/` directory and execute the following command:
+
+``make clean & make html``
+
+which will remove the current documenation and generate a new one. Additionally, note that you can make changes on every reStructuredText or Markdown file placed under the `docs/` directory, since as you may see, it is the information that will be shown in the HTML generated documentation.
+
+**When baking cookies recipe is the key, so that any other person can bake it and/or understand its process!**
 
 ## Cookie recipe created by...
 
