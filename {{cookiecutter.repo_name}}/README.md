@@ -38,7 +38,7 @@ So on, the previous piece of code outputs the following line:
 
 ## Contribute
 
-As this is an open source project it is **open to contributions, bug reports, bug fixes, documentation improvements, enhancements and ideas**. There is an open tab of [issues](https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}/issues) where anyone can open new issues if needed or navigate through them in order to solve them or contribute to its solving. Remember that **issues are not threads to describe multiple problems**, this does not mean that issues can't be discussed, but so to keep a structured project management, the same issue should not describe different problems, just the main one and some nested/related errors that may be found.
+As this is an open source project it is **open to contributions, bug reports, bug fixes, documentation improvements, enhancements and ideas**. There is an open tab of [issues](https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}/issues) where anyone can open new issues if needed or navigate through them in order to solve them or contribute to its solving. Remember that **issues are not threads to describe multiple problems**, this does not mean that issues can't be discussed, but so to keep a structured project management, the same issue should not describe different problems, just the main one and some nested/related errors that may be found.
 
 ## Citation
 
@@ -52,7 +52,7 @@ When citing this repository on your publications please use the following **BibT
     year = { {% now 'local', '%Y' %} },
     publisher = {GitHub},
     journal = {GitHub Repository},
-    howpublished = {\url{https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.package_name }}}}
+    howpublished = {\url{https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}}}
 }
 ```
 
